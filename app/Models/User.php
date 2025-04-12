@@ -7,6 +7,8 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Database\Eloquent\SoftDeletes;
+use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Str;
 
 class User extends Authenticatable
 {
@@ -14,7 +16,7 @@ class User extends Authenticatable
     use HasFactory, Notifiable,softDeletes;
     protected $keyType = 'string';
     public $incrementing = false;
-    protected $table = 'users'; 
+    protected $table = 'users';
     /**
      * The attributes that are mass assignable.
      *
@@ -44,11 +46,17 @@ class User extends Authenticatable
     }
 
     // 🔐 Biar password otomatis dihash
-    public function setPasswordAttribute($value)
-    {
-        $this->attributes['password'] = bcrypt($value);
-    }
 
+
+
+    protected static function boot()
+    {
+        parent::boot();
+
+        static::creating(function ($model) {
+            $model->id = Str::uuid();
+        });
+    }
 
 
 

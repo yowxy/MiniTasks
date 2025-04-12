@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     @vite(['resources/css/app.css','resources/js/app.js'])
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <title>Permify</title>
 </head>
 <body>
@@ -13,13 +15,12 @@
     <!-- Hero Section -->
     <div class="relative isolate px-6 pt-14 lg:px-8">
       <div class="absolute inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden blur-3xl sm:-top-80" aria-hidden="true">
-        <div class="relative left-[calc(50%-11rem)] aspect-[1155/678] w-[36.125rem] -translate-x-1/2 rotate-[30deg] bg-gradient-to-tr from-[#ff80b5] to-[#9089fc] opacity-30 sm:left-[calc(50%-30rem)] sm:w-[72.1875rem]"
-             style="clip-path: polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)"></div>
+
       </div>
       <div class="mx-auto max-w-2xl py-32 sm:py-48 lg:py-56">
         <div class="hidden sm:mb-8 sm:flex sm:justify-center">
           <div class="relative rounded-full px-3 py-1 text-sm text-gray-600 ring-1 ring-gray-900/10 hover:ring-gray-900/20">
-            Solusi untuk bisnis Anda. <a href="#" class="font-semibold text-indigo-600"><span class="absolute inset-0" aria-hidden="true"></span>Read more <span aria-hidden="true">&rarr;</span></a>
+            Solusi untuk bisnis Anda.
           </div>
         </div>
         <div class="text-center">
@@ -31,14 +32,10 @@
           </div>
         </div>
       </div>
-      <div class="absolute inset-x-0 top-[calc(100%-13rem)] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[calc(100%-30rem)]" aria-hidden="true">
-        <div class="relative left-[calc(50%+3rem)] aspect-[1155/678] w-[36.125rem] -translate-x-1/2 bg-gradient-to-tr from-[#ff80b5] to-[#9089fc] opacity-30 sm:left-[calc(50%+36rem)] sm:w-[72.1875rem]"
-             style="clip-path: polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)"></div>
-      </div>
     </div>
   </div>
 
- 
+
   <section class="py-24 bg-gray-50">
   <div class="max-w-7xl mx-auto px-6 lg:px-8 text-center">
     <h2 class="text-4xl font-bold text-gray-900 sm:text-5xl">Kenapa Harus <span class="text-indigo-600">Permify</span>?</h2>
@@ -48,7 +45,7 @@
 
     <div class="mt-16 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
       <!-- Card 1 -->
-      <div class="bg-white p-8 rounded-2xl shadow hover:shadow-md transition">
+      <div class="bg-white p-8 rounded-2xl shadow hover:shadow-md transition"  data-aos="fade-up"  data-aos-duration="800">
         <div class="flex justify-center items-center w-16 h-16 bg-indigo-100 rounded-full mx-auto mb-6">
           <!-- Icon from Lucide -->
           <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 text-indigo-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -61,7 +58,7 @@
       </div>
 
       <!-- Card 2 -->
-      <div class="bg-white p-8 rounded-2xl shadow hover:shadow-md transition">
+      <div class="bg-white p-8 rounded-2xl shadow hover:shadow-md transition"  data-aos="fade-up"  data-aos-duration="850">
         <div class="flex justify-center items-center w-16 h-16 bg-indigo-100 rounded-full mx-auto mb-6">
           <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 text-indigo-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path d="M3 4a1 1 0 0 1 1-1h7v5h6v14H4a1 1 0 0 1-1-1V4z" />
@@ -73,7 +70,7 @@
       </div>
 
       <!-- Card 3 -->
-      <div class="bg-white p-8 rounded-2xl shadow hover:shadow-md transition">
+      <div class="bg-white p-8 rounded-2xl shadow hover:shadow-md transition"  data-aos="fade-up"  data-aos-duration="1000">
         <div class="flex justify-center items-center w-16 h-16 bg-indigo-100 rounded-full mx-auto mb-6">
           <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 text-indigo-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path d="M4 4v16h16V4H4z" />
@@ -85,7 +82,7 @@
       </div>
 
       <!-- Card 4 -->
-      <div class="bg-white p-8 rounded-2xl shadow hover:shadow-md transition">
+      <div class="bg-white p-8 rounded-2xl shadow hover:shadow-md transition"  data-aos="fade-up"  data-aos-duration="1050">
         <div class="flex justify-center items-center w-16 h-16 bg-indigo-100 rounded-full mx-auto mb-6">
           <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 text-indigo-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path d="M12 2L2 7l10 5 10-5-10-5z" />
@@ -98,7 +95,7 @@
       </div>
 
       <!-- Card 5 -->
-      <div class="bg-white p-8 rounded-2xl shadow hover:shadow-md transition">
+      <div class="bg-white p-8 rounded-2xl shadow hover:shadow-md transition"  data-aos="fade-up"  data-aos-duration="1050">
         <div class="flex justify-center items-center w-16 h-16 bg-indigo-100 rounded-full mx-auto mb-6">
           <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 text-indigo-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path d="M12 1v22" />
@@ -110,7 +107,7 @@
       </div>
 
       <!-- Card 6 -->
-      <div class="bg-white p-8 rounded-2xl shadow hover:shadow-md transition">
+      <div class="bg-white p-8 rounded-2xl shadow hover:shadow-md transition"  data-aos="fade-up"  data-aos-duration="1050">
         <div class="flex justify-center items-center w-16 h-16 bg-indigo-100 rounded-full mx-auto mb-6">
           <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 text-indigo-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <circle cx="12" cy="12" r="10" />
@@ -130,19 +127,20 @@
   <div class="max-w-6xl mx-auto px-6 text-center">
     <h2 class="text-3xl font-bold text-gray-900 mb-12">Apa Kata Mereka?</h2>
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
-      <div class="bg-gray-100 p-8 rounded-xl text-left shadow-sm hover:shadow-md transition">
+      <div class="bg-gray-100 p-8 rounded-xl text-left shadow-sm hover:shadow-md transition"  data-aos="fade-right" data-aos-duration="800">
         <p class="italic text-gray-700">“Sejak pakai Permify, proses pengambilan keputusan kami jadi 3x lebih cepat. Dashboard yang interaktif dan laporan real-time benar-benar mengubah cara tim kami bekerja. Sekarang kami bisa fokus pada strategi, bukan sekadar mengumpulkan data.”</p>
         <p class="mt-6 font-semibold text-indigo-600">– Andi, CEO StartupAja</p>
       </div>
-      <div class="bg-gray-100 p-8 rounded-xl text-left shadow-sm hover:shadow-md transition">
+
+      <div class="bg-gray-100 p-8 rounded-xl text-left shadow-sm hover:shadow-md transition"  data-aos="fade-left" data-aos-duration="850">
         <p class="italic text-gray-700">“Integrasinya gampang banget dan support-nya top! Dalam waktu kurang dari satu jam, kami sudah bisa menghubungkan semua tools yang kami pakai sehari-hari. Tim support juga sangat responsif dan membantu di setiap prosesnya.”</p>
         <p class="mt-6 font-semibold text-indigo-600">– Rina, CTO FutureTech</p>
       </div>
-      <div class="bg-gray-100 p-8 rounded-xl text-left shadow-sm hover:shadow-md transition">
+      <div class="bg-gray-100 p-8 rounded-xl text-left shadow-sm hover:shadow-md transition"  data-aos="fade-right" data-aos-duration="1000">
         <p class="italic text-gray-700">“Permify membantu kami menyederhanakan pelaporan bulanan untuk seluruh divisi. Sekarang semua laporan terotomatisasi dan dikirim tepat waktu ke manajemen. Sangat hemat waktu dan mengurangi kesalahan manual.”</p>
         <p class="mt-6 font-semibold text-indigo-600">– Bayu, Manager Operasional SinarData</p>
       </div>
-      <div class="bg-gray-100 p-8 rounded-xl text-left shadow-sm hover:shadow-md transition">
+      <div class="bg-gray-100 p-8 rounded-xl text-left shadow-sm hover:shadow-md transition"  data-aos="fade-left" data-aos-duration="1000">
         <p class="italic text-gray-700">“Kami butuh solusi yang scalable dan aman untuk pertumbuhan bisnis kami. Permify menjawab kebutuhan itu dengan fitur analitik dan keamanan data kelas enterprise. Sangat kami rekomendasikan untuk startup yang ingin berkembang lebih cepat.”</p>
         <p class="mt-6 font-semibold text-indigo-600">– Dita, Head of Product NexaCorp</p>
       </div>
@@ -154,7 +152,7 @@
   <div class="text-center text-white px-6">
     <h2 class="text-3xl font-bold">Siap membawa bisnismu ke level selanjutnya?</h2>
     <p class="mt-4 mb-6 text-lg">Daftar sekarang dan nikmati analisis data otomatis dari Permify.</p>
-    <a href="#" class="inline-block bg-white text-indigo-600 px-6 py-3 rounded-md font-semibold hover:bg-gray-100 transition">Daftar Sekarang</a>
+    <a href="{{ route('Login') }}" class="inline-block bg-white text-indigo-600 px-6 py-3 rounded-md font-semibold hover:bg-gray-100 transition">Daftar Sekarang</a>
   </div>
 </section>
 
@@ -173,5 +171,10 @@
       menu.classList.add('hidden');
     });
   </script>
+
+  <script>
+  AOS.init();
+</script>
+
 </body>
 </html>
