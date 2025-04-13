@@ -30,10 +30,21 @@
           <a href="#" class="text-sm font-semibold text-gray-900">About</a>
           <a href="#" class="text-sm font-semibold text-gray-900">Contact us</a>
         </div>
-        <div class="hidden lg:flex lg:flex-1 lg:justify-end">
-          <a href="{{ route('Login') }}" class="text-sm font-semibold text-gray-900 mx-3">Log in <span aria-hidden="true"></span></a>
-          <a href="{{ route('Register') }}" class="text-sm font-semibold text-gray-900">Register<span aria-hidden="true"></span></a>
-        </div>
+@auth
+    <h1>Halo, {{ Auth::user()->name }}</h1>
+@endauth
+
+@guest
+    <div class="hidden lg:flex lg:flex-1 lg:justify-end">
+        <a href="{{ route('Login') }}" class="text-sm font-semibold text-gray-900 mx-3">Login</a>
+        <a href="{{ route('Register') }}" class="text-sm font-semibold text-gray-900">Register</a>
+    </div>
+@endguest
+
+
+
+
+
       </nav>
 
       <!-- Mobile menu -->

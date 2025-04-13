@@ -29,10 +29,6 @@ class User extends Authenticatable
         'roles'
     ];
 
-    protected $casts = [
-        'email_verified_at' => 'datetime',
-    ];
-
     // 🔗 Relasi ke tasks yang ditugaskan ke user
     public function tasks()
     {

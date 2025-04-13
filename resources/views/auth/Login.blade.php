@@ -12,7 +12,7 @@
     <section class="min-h-screen flex items-center justify-center bg-gray-100 px-6">
   <div class="bg-white p-8 rounded-xl shadow-md w-full max-w-md">
     <h2 class="text-2xl font-bold mb-6 text-center text-gray-800">Masuk ke Akun Anda</h2>
-    <form action="{{ route('LoginPost') }}" method="POST" class="space-y-5">
+    <form action="{{ route('Login') }}" method="POST" class="space-y-5">
         @csrf
       <div>
         <label class="block mb-1 text-sm font-medium text-gray-700">Email</label>
