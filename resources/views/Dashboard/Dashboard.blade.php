@@ -30,8 +30,8 @@
         <h3 class="text-xl font-semibold text-center mb-8">Dashboard</h3>
         <ul>
             <li><a href="#" class="block py-2 px-4 hover:bg-gray-700 rounded">Dashboard</a></li>
-            <li><a href="#" class="block py-2 px-4 hover:bg-gray-700 rounded">Manage Users</a></li>
-            <li><a href="#" class="block py-2 px-4 hover:bg-gray-700 rounded">Settings</a></li>
+            <li><a href="#" class="block py-2 px-4 hover:bg-gray-700 rounded">User Account</a></li>
+            <li><a href="#" class="block py-2 px-4 hover:bg-gray-700 rounded">Role Managements</a></li>
             <li><a href="#" class="block py-2 px-4 hover:bg-gray-700 rounded">Reports</a></li>
             <li>
                 <form action="{{ route('logout') }}" method="POST" class="inline">
@@ -46,6 +46,8 @@
 
     <!-- Main Content -->
     <div class="ml-[260px] p-6">
+
+
         <h1 class="text-3xl font-bold mb-6">Welcome  to Your Dashboard</h1>
 
         <!-- Card Section -->

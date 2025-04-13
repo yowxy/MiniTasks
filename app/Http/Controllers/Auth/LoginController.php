@@ -15,21 +15,24 @@ class LoginController extends Controller
         return view('auth.Login');
     }
 
+
    public function login(LoginRequest $request)
   {
     $credentials = $request->only('email', 'password');
 
     if (Auth::attempt($credentials)) {
-        
+        $request->session()->regenerate();
         $user = Auth::user();
 
             switch ($user->roles) {
                 case 'Administrator':
-                    return redirect()->route('Dashboard');
+                    return redirect()->intended('/');
                 case 'Manager':
                 // return redirect()->route('manager.dashboard');
+                    break;
                 case 'Staff':
                 // return redirect()->route('staff.dashboard');
+                    break;
                 default:
                   return redirect()->route('Login');
             }

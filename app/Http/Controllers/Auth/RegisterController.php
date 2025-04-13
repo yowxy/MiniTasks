@@ -10,6 +10,14 @@ use Illuminate\Support\Facades\Auth;
 
 class RegisterController extends Controller
 {
+/*************  ✨ Windsurf Command ⭐  *************/
+/**
+ * Display the registration form view.
+ *
+ * @return \Illuminate\View\View
+ */
+
+/*******  489dc9f8-cff7-4805-9366-7a41172676fa  *******/
     public function index()
     {
         return view('auth.Register');
