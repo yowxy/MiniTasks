@@ -9,6 +9,11 @@ Route::get('/', function () {
     return view('Landing.index');
 })->name('Home');
 
+Route::get('/profile',function(){
+    return view('Landing.profile.index');
+})->name('profile');
+
+
 Route::get('/login', [LoginController::class, 'index'])->name('login');
 Route::post('/login', [LoginController::class, 'login'])->name('Login');
 Route::post('/logout',[LoginController::class, 'logout'])->name('logout');
