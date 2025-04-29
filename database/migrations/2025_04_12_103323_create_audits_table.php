@@ -12,9 +12,9 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('audits', function (Blueprint $table) {
-            $table->uuid('id')->primary();
-            $table->foreign('users_id')->references('id')->on('users')->onDelete('cascade');
-            $table->uuid('users_id'); // ⬅️ WAJIB sebelum bikin foreign key
+            $table->id();   
+            // $table->foreign('users_id')->references('id')->on('users')->onDelete('cascade');
+            $table->foreignId('user_id')->constrained()->cascadeOnDelete();
             $table->string('event'); // created, updated, deleted
             $table->morphs('auditable'); // auditable_type & auditable_id
             $table->json('old_values')->nullable();

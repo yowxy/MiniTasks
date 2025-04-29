@@ -10,9 +10,6 @@ class dashboardController extends Controller
 {
     public function index()
     {
-        if (auth()->check()) {
-            dd('Belum login');
-        }
         // $users 
         $usersCount = User::count();
         $users = User::all();

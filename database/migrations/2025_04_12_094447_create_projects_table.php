@@ -12,14 +12,14 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('projects', function (Blueprint $table) {
-            $table->uuid('id')->primary();
-            $table->foreign('department_id')->references('id')->on('departments')->onDelete('cascade');
-            $table->uuid('department_id');
+            $table->id();
+            $table->foreignId('department_id')->constrained()->cascadeOnDelete();
             $table->string('name');
             $table->dateTime('start_date');
             $table->boolean('is_active')->default(true);
-            $table->json('metadata')->nullable(); // custom detail tambahan
-            $table->string('file_path'); // path file PDF (100–500kb)
+            $table->json('metadata')->nullable();
+            $table->string('file_path'); 
+            
             $table->softDeletes();
             $table->timestamps();
         });

@@ -14,8 +14,6 @@ class User extends Authenticatable
 {
     /** @use HasFactory<\Database\Factories\UserFactory> */
     use HasFactory, Notifiable,softDeletes;
-    protected $keyType = 'string';
-    public $incrementing = false;
     protected $table = 'users';
     /**
      * The attributes that are mass assignable.
@@ -40,22 +38,6 @@ class User extends Authenticatable
     {
         return $this->hasMany(Audit::class);
     }
-
-    // 🔐 Biar password otomatis dihash
-
-
-    protected static function boot()
-    {
-        parent::boot();
-
-        // Auto generate UUID kalau belum diset
-        static::creating(function ($model) {
-            if (empty($model->{$model->getKeyName()})) {
-                $model->{$model->getKeyName()} = (string) Str::uuid();
-            }
-        });
-    }
-
 
 
     /**

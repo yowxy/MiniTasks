@@ -50,6 +50,10 @@
 
         <h1 class="text-3xl font-bold mb-6">Welcome  to Your Dashboard</h1>
 
+        @auth
+            <h2 class="text-2xl font-semibold mb-4">Hello, {{ Auth::user()->name }}!</h2>
+        @endauth
+
         <!-- Card Section -->
         <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
             <div class="bg-blue-500 text-white p-6 rounded-lg shadow-md">

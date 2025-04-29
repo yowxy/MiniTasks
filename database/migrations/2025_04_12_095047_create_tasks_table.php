@@ -12,11 +12,12 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('tasks', function (Blueprint $table) {
-            $table->uuid()->primary();
-            $table->foreign('projects_id')->references('id')->on('projects')->onDelete('cascade');
-            $table->foreign('assigned_to')->references('id')->on('users')->onDelete('cascade');
-            $table->uuid('projects_id');
-            $table->uuid('assigned_to'); // foreign key ke users
+            $table->id();
+            // $table->foreign('projects_id')->references('id')->on('projects')->onDelete('cascade');
+            // $table->foreign('assigned_to')->references('id')->on('users')->onDelete('cascade');
+            $table->foreignId('project_id')->constrained()->cascadeOnDelete();  
+            // $table->foreignId('assigned_to')->constrained()->cascadeOnDelete();    
+            
             $table->string('title');
             $table->dateTime('due_date');
             $table->boolean('is_completed')->default(false);
