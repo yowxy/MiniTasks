@@ -10,10 +10,15 @@ class dashboardController extends Controller
 {
     public function index()
     {
-        // $users 
+        // $users
         $usersCount = User::count();
         $users = User::all();
         return view('Dashboard.Dashboard', compact('usersCount','users'));
+    }
+
+    public function roleManage()
+    {
+        return view('Dashboard.roleManage.index');
     }
 
 }

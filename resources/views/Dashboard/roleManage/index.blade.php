@@ -1,42 +1,59 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    @vite(['resources/css/app.css', 'resources/js/app.js'])
+@extends('components.layout')
 
-    <title>Document</title>
-</head>
-<body>
-    <!-- Optional: Add custom CSS -->
-    <style>
-        /* Custom styles for sidebar and content */
-        .sidebar {
-            position: fixed;
-            top: 0;
-            left: 0;
-            height: 100vh;
-            width: 250px;
-        }
-    </style>
+@include('components.sidebar')
+{{-- @section('content') --}}
 
-        <div class="sidebar bg-gray-800 text-white p-5">
-        <h3 class="text-xl font-semibold text-center mb-8">Dashboard</h3>
-        <ul>
-            <li><a href="#" class="block py-2 px-4 hover:bg-gray-700 rounded">Dashboard</a></li>
-            <li><a href="#" class="block py-2 px-4 hover:bg-gray-700 rounded">User Account</a></li>
-            <li><a href="#" class="block py-2 px-4 hover:bg-gray-700 rounded">Role Managements</a></li>
-            <li><a href="#" class="block py-2 px-4 hover:bg-gray-700 rounded">Reports</a></li>
-            <li>
-                <form action="{{ route('logout') }}" method="POST" class="inline">
-                    @csrf
-                    <button type="submit" class="block py-2 px-4 hover:bg-gray-700 rounded text-left">
-                        Logout
-                    </button>
-                </form>
-            </li>
-        </ul>
+    <div class="p-6 ml-64">
+        <div class="max-w-7xl mx-auto  shadow-md rounded-lg p-6">
+            <div class="flex items-center justify-between mb-6">
+                <h2 class="text-2xl font-semibold text-gray-700">Manajemen Role</h2>
+                <a href="{{ route('createRole') }}"
+                   class="bg-indigo-600 text-white px-4 py-2 rounded hover:bg-indigo-700 text-sm">
+                    + Tambah Role
+                </a>
+            </div>
+
+            <div class="overflow-x-auto">
+                <table class="min-w-full table-auto">
+                    <thead class="bg-gray-100 text-gray-700 text-left text-sm uppercase">
+                        <tr>
+                            {{-- <th class="px-4 py-2">#</th> --}}
+                            <th class="px-4 py-2">Nama Role</th>
+                            <th class="px-4 py-2">Jumlah Pengguna</th>
+                            <th class="px-4 py-2">Aksi</th>
+                        </tr>
+                    </thead>
+                    <tbody class="text-sm text-gray-700 divide-y divide-gray-200">
+                        {{-- @foreach ($roles as $index => $role) --}}
+                            <tr>
+                                {{-- <td class="px-4 py-2"></td> --}}
+                                <td class="px-4 py-2"></td>
+                                <td class="px-4 py-2"></td>
+                                <td class="px-4 py-2">
+                                    <div class="flex space-x-2">
+                                        <a href=""
+                                           class="bg-blue-700 text-white px-4 py-2 rounded  hover:underline text-sm">Edit</a>
+                                        <form action="" method="POST"
+                                              onsubmit="return confirm('Yakin ingin menghapus role ini?')">
+                                            @csrf
+                                            @method('DELETE')
+                                            <button type="submit" class="bg-red-500 text-white px-4 py-2 rounded  hover:underline text-sm">
+                                                Hapus
+                                            </button>
+                                        </form>
+                                    </div>
+                                </td>
+                            </tr>
+                        {{-- @endforeach --}}
+
+                        {{-- @if ($roles->isEmpty())
+                            <tr>
+                                <td colspan="4" class="px-4 py-6 text-center text-gray-400">Belum ada role.</td>
+                            </tr>
+                        @endif --}}
+                    </tbody>
+                </table>
+            </div>
+        </div>
     </div>
-</body>
-</html>
+{{-- @endsection --}}
